@@ -4,19 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>SBA 308A JavaScript Web Application</title>
+    <title>Imgur API Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./index.js"></script>
+    <style>
+        img {
+            width: 200px;
+            margin: 10px;
+        }
+    </style>
 </head>
 
 <body>
-        <h1>SBA 308A JavaScript Web Application</h1>
-        <header>
-            <h1>Search Image</h1>
-            <input type="text" id="breed-search" placeholder="Search">
-            <button id="search-button">Search</button>
-        </header>
-        <main class="gallery"></main>
-    <script src="script.js"></script>
+    <h1>Imgur API Demo</h1>
+
+    <!-- Search Bar for GET requests -->
+    <div>
+        <input type="text" id="searchQuery" placeholder="Search for images">
+        <button id="searchButton">Search</button>
+    </div>
+
+    <!-- Display Images -->
+    <div id="imageResults"></div>
+
+    <!-- Upload Image -->
+    <div>
+        <input type="file" id="uploadImage" accept="image/*">
+        <button id="uploadButton">Upload</button>
+    </div>
 </body>
 
 </html>

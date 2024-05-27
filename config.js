@@ -1,0 +1,1 @@
+export const clientId = 'de2911934369885';  // Replace with your Imgur Client ID
