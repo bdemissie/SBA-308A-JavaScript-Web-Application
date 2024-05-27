@@ -4,34 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imgur API Demo</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="./index.js"></script>
-    <style>
-        img {
-            width: 200px;
-            margin: 10px;
-        }
-    </style>
+    <title>Unsplash Image Search</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Imgur API Demo</h1>
-
-    <!-- Search Bar for GET requests -->
-    <div>
-        <input type="text" id="searchQuery" placeholder="Search for images">
-        <button id="searchButton">Search</button>
+    <div class="container">
+        <h1>Unsplash Image Search</h1>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search for images..." required>
+            <button type="submit">Search</button>
+        </form>
+        <div id="image-results"></div>
     </div>
-
-    <!-- Display Images -->
-    <div id="imageResults"></div>
-
-    <!-- Upload Image -->
-    <div>
-        <input type="file" id="uploadImage" accept="image/*">
-        <button id="uploadButton">Upload</button>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>
